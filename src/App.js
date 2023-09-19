@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Orders from "./Orders";
+import DeleteItem from "./DeletItem";
 
 export default function Form() {
   const [person, setPerson] = useState({
@@ -49,6 +50,7 @@ export default function Form() {
         </p>
       </div>
       <Orders />
+      <DeleteItem />
     </>
   );
 }

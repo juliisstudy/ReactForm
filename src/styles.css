@@ -6,3 +6,15 @@
 label {
   display: block;
 }
+.Orders {
+  float: left;
+  width: 100%;
+}
+ul li {
+  display: flex;
+  align-items: center;
+}
+
+button {
+  margin-left: 20px;
+}

@@ -9,7 +9,7 @@ export default function Orders() {
     <>
       <div>
         <h1>Orders</h1>
-        <input value={name} onChange={(e) => setName(e.target.vale)} />
+        <input value={name} onChange={(e) => setName(e.target.value)} />
         <button
           onClick={() => {
             orders.push({
@@ -21,8 +21,8 @@ export default function Orders() {
           Add
         </button>
         <ul>
-          {orders.map((orders) => (
-            <li key={orders.id}>{orders.name}</li>
+          {orders.map((order) => (
+            <li key={order.id}>{order.name}</li>
           ))}
         </ul>
       </div>
