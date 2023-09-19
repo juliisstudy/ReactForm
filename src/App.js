@@ -1,51 +1,54 @@
-import "./styles.css";
 import { useState } from "react";
+import Orders from "./Orders";
 
 export default function Form() {
   const [person, setPerson] = useState({
-    firstName: "Juli",
+    firstName: "juli",
     lastName: "Li",
-    email: ""
+    email: "123@gmail.com",
   });
 
   function handleFirstNameChange(e) {
     setPerson({
       ...person,
-      firstName: e.target.vale
+      firstName: e.target.value,
     });
   }
 
   function handleLastNameChange(e) {
     setPerson({
       ...person,
-      lastName: e.target.vale
+      lastName: e.target.value,
     });
   }
 
   function handleEmailChange(e) {
     setPerson({
       ...person,
-      email: e.target.vale
+      email: e.target.value,
     });
   }
 
   return (
     <>
-      <label>
-        First name:
-        <input value={person.firstName} onchange={handleFirstNameChange} />
-      </label>
-      <label>
-        Last name:
-        <input value={person.lastName} onchange={handleLastNameChange} />
-      </label>
-      <label>
-        email:
-        <input value={person.email} onchange={handleEmailChange} />
-      </label>
-      <p>
-        {person.firstName} {person.lastName} {person.email}
-      </p>
+      <div className="Form">
+        <label>
+          First Name:
+          <input value={person.firstName} onChange={handleFirstNameChange} />
+        </label>
+        <label>
+          Last Name:
+          <input value={person.lastName} onChange={handleLastNameChange} />
+        </label>
+        <label>
+          Email:
+          <input value={person.email} onChange={handleEmailChange} />
+        </label>
+        <p>
+          {person.firstName} {person.lastName} {person.email}
+        </p>
+      </div>
+      <Orders />
     </>
   );
 }
