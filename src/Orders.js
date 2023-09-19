@@ -7,7 +7,7 @@ export default function Orders() {
 
   return (
     <>
-      <div>
+      <div className="Form">
         <h1>Orders</h1>
         <input value={name} onChange={(e) => setName(e.target.value)} />
         <button

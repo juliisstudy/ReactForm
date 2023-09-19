@@ -1,11 +1,5 @@
 import { useState } from "react";
-
-let initialOrder = [
-  { id: 0, name: "Burger" },
-  { id: 1, name: "Pancake" },
-  { id: 2, name: "omelet" },
-  { id: 3, name: "Hot dog" },
-];
+import { initialOrder } from "./data.js";
 
 export default function DeleteItem() {
   const [orders, setOrders] = useState(initialOrder);

@@ -1,6 +1,9 @@
 import { useState } from "react";
 import Orders from "./Orders";
 import DeleteItem from "./DeletItem";
+import Counter from "./Counter";
+import Insertion from "./Insertion";
+import "./styles.css";
 
 export default function Form() {
   const [person, setPerson] = useState({
@@ -49,8 +52,10 @@ export default function Form() {
           {person.firstName} {person.lastName} {person.email}
         </p>
       </div>
-      <Orders />
-      <DeleteItem />
+      <Orders  />
+      <DeleteItem className="Form" />
+      <Counter className="Form" />
+      <Insertion className="Form" />
     </>
   );
 }
