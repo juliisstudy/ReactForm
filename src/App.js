@@ -3,6 +3,7 @@ import Orders from "./Orders";
 import DeleteItem from "./DeletItem";
 import Counter from "./Counter";
 import Insertion from "./Insertion";
+import CheckList from "./CheckList";
 import "./styles.css";
 
 export default function Form() {
@@ -52,10 +53,11 @@ export default function Form() {
           {person.firstName} {person.lastName} {person.email}
         </p>
       </div>
-      <Orders  />
+      <Orders />
       <DeleteItem className="Form" />
       <Counter className="Form" />
       <Insertion className="Form" />
+      <CheckList />
     </>
   );
 }
